@@ -1,0 +1,2 @@
+FROM ubuntu:18.04
+COPY dataset/train50/train/badminton.0.jpg ./
