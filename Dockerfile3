@@ -1,4 +1,8 @@
-FROM ubuntu:16.04
-COPY dataset/train50/test/x.jpg dataset/train50/train
-CMD python3 fast.py
+FROM python:3.7
 
+RUN pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install fastai --upgrade
+COPY /dataset/train50/train /dataset/train50/train
+COPY fast.py /dataset/train50
+
+CMD python fast.py
