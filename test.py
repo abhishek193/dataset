@@ -1,9 +1,14 @@
-from fast import my_model
+import fastai
+print(fastai.__version__)
+
+from fastai.vision.all import *
 import sys
 
 def predict(model, image):
     out = model.predict(image)
     return out
 
-out = predict(my_model, sys.argv[1])
+my_model = learn.load_learner('my_model')
+
+out = predict(my_model, '/test10/test/1.jpg')
 print(out)
