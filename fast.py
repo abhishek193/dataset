@@ -23,7 +23,7 @@ path = os.getcwd() + '/train50/train'
 os.chdir(path)
 
 def train(files):
-    dls = ImageDataLoaders.from_name_func(path, files, label_func, item_tfms=Resize(100))
+    dls = ImageDataLoaders.from_path_func(path, files, label_func, item_tfms=Resize(100))
     learn = cnn_learner(dls, resnet34, metrics=error_rate)
     learn.fine_tune(1)
     return learn
