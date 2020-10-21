@@ -13,4 +13,4 @@ def predict(model, image):
 path = os.getcwd()+'/test10/test'
 print(os.getcwd())
 #out = predict(fast.my_model, '1.jpg')
-print(out)
+#print(out)
