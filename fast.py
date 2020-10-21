@@ -18,7 +18,7 @@ def label_func(f):
   return f[0] == 't'
 
 import os
-files = os.listdir(os.getcwd()+'/train50/train')
+files = os.listdir(os.getcwd()+'/train50')
 path = os.getcwd() + '/train50/train'
 print(len(files))
 print(os.getcwd())
