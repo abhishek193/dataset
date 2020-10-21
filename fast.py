@@ -19,9 +19,9 @@ def label_func(f):
 
 import os
 files = os.listdir(os.getcwd()+'/train50/train')
-
+path = os.getcwd() + '/train50/train'
 def train(files):
-    dls = ImageDataLoaders.from_path_func(os.getcwd(), files, label_func, item_tfms=Resize(100))
+    dls = ImageDataLoaders.from_path_func(path, files, label_func, item_tfms=Resize(100))
     learn = cnn_learner(dls, resnet34, metrics=error_rate)
     learn.fine_tune(1)
     return learn
