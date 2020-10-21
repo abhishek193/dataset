@@ -4,11 +4,13 @@ print(fastai.__version__)
 from fastai.vision.all import *
 import sys
 import fast
+import os
 
 def predict(model, image):
     out = model.predict(image)
     return out
 
-
-out = predict(fast.my_model, '/test10/test/1.jpg')
+path = os.getcwd()+'/test10/test'
+os.chdir(path)
+out = predict(fast.my_model, '1.jpg')
 print(out)
