@@ -10,5 +10,5 @@ def predict(model, image):
     return out
 
 
-out = predict(my_model, '/test10/test/1.jpg')
+out = predict(fast.my_model, '/test10/test/1.jpg')
 print(out)
