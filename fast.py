@@ -20,7 +20,7 @@ def label_func(f):
 import os
 files = os.listdir(os.getcwd()+'/train50/train')
 path = os.getcwd() + '/train50/train'
-print(files[0])
+print(len(files))
 print(os.getcwd())
 print(path)
 
@@ -31,6 +31,6 @@ def train(files):
     return learn
 
 #getdata()
-my_model = train(files)
+#my_model = train(files)
 
 #my_model.save('my_model')
