@@ -18,7 +18,7 @@ def label_func(f):
   return f[0] == 't'
 
 import os
-files = os.listdir(os.getcwd()+'/train')
+files = os.listdir(os.getcwd()+'/train50/train')
 
 def train(files):
     dls = ImageDataLoaders.from_path_func(os.getcwd(), files, label_func, item_tfms=Resize(100))
